@@ -1,4 +1,4 @@
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /ead/index.php/$1 [L]
+RewriteRule ^(.*)$ /Plataforma_EAD/index.php/$1 [L]
