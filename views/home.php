@@ -1,12 +1,14 @@
-<h1>Seus Cursos</h1>
-<?php foreach($cursos as $curso): ?>
-<a href="<?php echo BASE; ?>cursos/entrar/<?php echo $curso['id_curso']; ?>">
-<div class="cursoitem">
-	<img src="<?php echo BASE; ?>assets/images/cursos/<?php echo $curso['imagem']; ?>" border="0" width="260" height="150" /><br/><br/>
+<!DOCTYPE html>
+<html lang="en">
 
-	<strong><?php echo $curso['nome']; ?></strong><br/><br/>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
 
-	<?php echo $curso['descricao']; ?>
-</div>
-</a>
-<?php endforeach; ?>
+<body>
+	aqui é a home
+</body>
+
+</html>
