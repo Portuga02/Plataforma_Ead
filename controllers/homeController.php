@@ -18,6 +18,6 @@ class homeController extends controller
     {
         $dados = array();
 
-        $this->loadTemplate('home', $dados);
+        $this->loadView('home', $dados);
     }
 }
