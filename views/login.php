@@ -15,11 +15,11 @@
 	<div class="container">
 		<form>
 			<div class="col">
-				<label for="exampleInputEmail1">Email address</label>
+				<label for="exampleInputEmail1"> Digite seu Email</label>
 				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
 			</div>
 			<div class="col">
-				<label for="exampleInputPassword1">Password</label>
+				<label for="exampleInputPassword1">Digite sua senha cadastrada</label>
 				<input type="password" class="form-control" id="exampleInputPassword1" name="senha" placeholder="*******">
 			</div>
 
