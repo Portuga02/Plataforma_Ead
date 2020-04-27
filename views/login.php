@@ -13,7 +13,7 @@
 
 <body>
 	<div class="container">
-		<form>
+		<form method="post">
 			<div class="col">
 				<label for="exampleInputEmail1"> Digite seu Email</label>
 				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
