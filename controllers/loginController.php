@@ -22,4 +22,10 @@ class loginController extends controller
         }
         $this->loadTemplate('login', $array);
     }
+    /*funçao para deslogar da tela de usuários*/
+    public function logout()
+    {
+        unset($_SESSION['lgaluno']);
+        header("Location:" . BASE);
+    }
 }
