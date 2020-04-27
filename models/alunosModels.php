@@ -11,5 +11,17 @@ class alunosModels extends model
             return false;
         }
     }
-    public function Login()
+    public function fazerLogin($email, $senha)
+    {
+        $QueryBanco = "SELECT * FROM alunos WHERE email = '$email' AND senha = '$senha'";
+        $requisicao = $this->db->query($QueryBanco);
+
+        if ($QueryBanco->rowCount() > 0) {
+            $linha = $requisicao->fetch();
+            $_SESSION['lgaluno'] = $linha['id'];
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

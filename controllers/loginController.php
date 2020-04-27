@@ -15,6 +15,10 @@ class loginController extends controller
         if (isset($_POST['email']) && !empty($_POST['email'])) {
             $email = addslashes($_POST['email']);
             $senha = md5($_POST['senha']);
+            $alunos = new alunosModels();
+            if ($alunos->fazerLogin($email, $senha)) {
+                header("Location:" . BASE);
+            }
         }
         $this->loadTemplate('login', $array);
     }
