@@ -1,13 +1,15 @@
 <?php
-Class alunosModels extends model{
+class alunosModels extends model
+{
 
     /*FUNÇÃO VERIFICADORA DO LOGIN*/
-    public function isLogged(){
-        if(isset($_SESSION['lgaluno']) && !empty($_SESSION['lgaluno'])){
+    public function isLogged()
+    {
+        if (isset($_SESSION['lgaluno']) && !empty($_SESSION['lgaluno'])) {
             return true;
-        } else{
+        } else {
             return false;
         }
-
     }
+    public function Login()
 }
