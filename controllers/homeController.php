@@ -1,9 +1,11 @@
 <?php
 
 /**Controller referente ao uso da home */
-class homeController extends controller {
+class homeController extends controller
+{
 
-	public function __construct() {
+	public function __construct()
+	{
 		parent::__construct();
 
 		$alunos = new alunosModels();
@@ -12,7 +14,8 @@ class homeController extends controller {
 			header("Location: " . BASE . "login");
 		}
 	}
-	public function index() {
+	public function index()
+	{
 		$dados = array(
 			'info' => array(),
 			'cursos' => array()
@@ -21,8 +24,8 @@ class homeController extends controller {
 		$alunos->setALuno($_SESSION['lgaluno']);
 		$dados['info'] = $alunos;
 
-		$cursos = new cursosModels();
-
+		$cursos = new CursoModels();
+			// var_dump($cursos)
 		$dados['cursos'] = $cursos->getCursosDoAluno($alunos->getId());
 
 		$this->loadTemplate('home', $dados);

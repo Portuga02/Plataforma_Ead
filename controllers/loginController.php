@@ -1,12 +1,15 @@
 <?php
 
 /**Controller referente ao uso do login */
-class loginController extends controller {
+class loginController extends controller
+{
 
-	public function __construct() {
+	public function __construct()
+	{
 		parent::__construct();
 	}
-	public function index() {
+	public function index()
+	{
 		$array = array();
 
 		if (isset($_POST['email']) && !empty($_POST['email'])) {
@@ -20,7 +23,8 @@ class loginController extends controller {
 		$this->loadView('login', $array);
 	}
 	/*funçao para deslogar da tela de usuários*/
-	public function logout() {
+	public function logout()
+	{
 		unset($_SESSION['lgaluno']);
 		header("Location:" . BASE);
 	}
