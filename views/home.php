@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 	<meta charset="UTF-8">
@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	aqui é a home
+	<h1> Seus Cursos </h1>
 </body>
 
 </html>
