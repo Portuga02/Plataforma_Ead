@@ -14,14 +14,15 @@ class homeController extends controller {
 	}
 	public function index() {
 		$dados = array(
-			'info' => array()
-            'cursos' =>array();
-        );
+			'info' => array(),
+			'cursos' => array()
+		);
 		$alunos = new alunosModels();
 		$alunos->setALuno($_SESSION['lgaluno']);
 		$dados['info'] = $alunos;
 
-		$cursos = new CursosModels();
+		$cursos = new cursosModels();
+
 		$dados['cursos'] = $cursos->getCursosDoAluno($alunos->getId());
 
 		$this->loadTemplate('home', $dados);

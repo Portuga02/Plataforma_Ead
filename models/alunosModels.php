@@ -1,15 +1,18 @@
 <?php
-class alunosModels extends model {
+class alunosModels extends model
+{
 
 	/*FUNÇÃO VERIFICADORA DO LOGIN*/
-	public function isLogged() {
+	public function isLogged()
+	{
 		if (isset($_SESSION['lgaluno']) && !empty($_SESSION['lgaluno'])) {
 			return true;
 		} else {
 			return false;
 		}
 	}
-	public function fazerLogin($email, $senha) {
+	public function fazerLogin($email, $senha)
+	{
 		$QueryBanco = "SELECT * FROM alunos WHERE email = '$email' AND senha = '$senha'";
 		$requisicao = $this->db->query($QueryBanco);
 
@@ -22,7 +25,8 @@ class alunosModels extends model {
 		}
 	}
 	/*utilziando para trazer o nome do aluno na view*/
-	public function setAluno($id) {
+	public function setAluno($id)
+	{
 		$sql = "SELECT * FROM alunos WHERE id = '$id'";
 		$sql = $this->db->query($sql);
 		if ($sql->rowCount() > 0) {
@@ -30,10 +34,12 @@ class alunosModels extends model {
 		}
 	}
 
-	public function getNome() {
+	public function getNome()
+	{
 		return $this->info['nome'];
 	}
-	public function getId() {
+	public function getId()
+	{
 		return $this->info['id'];
 	}
 }
