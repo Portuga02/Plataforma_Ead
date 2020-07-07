@@ -9,7 +9,7 @@ class CursoModels extends model
 	{
 		$array = array();
 
-		$sql ="SELECT 
+		$sql = "SELECT 
 					aluno_curso.id_curso,
 					cursos.nome,
 					cursos.imagem,
