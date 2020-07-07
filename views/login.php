@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Plataforma de ensino a distancia </title>
-	<link href="<?php echo BASE_URL; ?>/assets/css/login.css" rel="stylesheet">
+
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -27,13 +27,13 @@
 							</div>
 							<div class="form-group">
 								<label class="text-info">Senha de Acesso:</label><br>
-								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="password">
+								<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha">
 
 							</div>
 							<!-- COMANDO PHP PARA EMITIR ERRO CASO NÃO ESTEJA CADASTRADO EM SISTEMA-->
-							<?php if (isset($error) && !empty($error)) : ?>
+							<!-- <?php if (isset($error) && !empty($error)) : ?>
 								<div class="alert alert-warning" role="alert"><?php echo $error; ?></div>
-							<?php endif; ?>
+							<?php endif; ?> -->
 							<br>
 							<button type="submit" class="btn btn-primary">Entrar</button>
 
