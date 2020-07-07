@@ -9,18 +9,17 @@ class CursoModels extends model
 	{
 		$array = array();
 
-		$sql = "SELECT 
-					aluno_curso.id_curso,
-					cursos.nome,
-					cursos.imagem,
-					cursos.descricao
-				FROM 
-					aluno_curso
-				LEFT JOIN cursos
-				ON 	aluno_curso.id_curso = cursos.id
-				WHERE
-					aluno_curso.id_aluno = '$id'
-		";
+		$sql = " SELECT 
+		alunos.id,
+		cursos.nome,
+		cursos.imagem,
+		cursos.descricao
+	FROM 
+		alunos
+	LEFT JOIN cursos
+	ON 	alunos.id = cursos.id
+	WHERE
+		alunos.id = '$id'";
 		$sql = $this->db->query($sql);
 
 		if ($sql->rowCount() > 0) {
