@@ -25,9 +25,10 @@ class homeController extends controller
 		$dados['info'] = $alunos;
 
 		$cursos = new CursoModels();
-		// var_dump($cursos)
+		// die(var_dump($cursos));
 		$dados['cursos'] = $cursos->getCursosDoAluno($alunos->getId());
-
+		// var_dump($dados);
+		// exit;
 		$this->loadTemplate('home', $dados);
 	}
 }
