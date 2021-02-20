@@ -1,7 +1,7 @@
 <?php
 
 /**Controller referente ao uso do login */
-class loginController extends controller
+class LoginController extends controller
 {
 
 	public function __construct()
