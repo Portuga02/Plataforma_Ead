@@ -1,7 +1,7 @@
 <?php
 
 /**Controller referente ao uso da home */
-class homeController extends controller
+class HomeController extends controller
 {
 
 	public function __construct()
