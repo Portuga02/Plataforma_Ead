@@ -10,16 +10,16 @@ class CursoModels extends model
 		$array = [];
 
 		$sql = " SELECT 
-		alunos.id,
+		aluno_curso.id_curso,
 		cursos.nome,
 		cursos.imagem,
 		cursos.descricao
 	FROM 
-		alunos
+		aluno_curso
 	LEFT JOIN cursos
-	ON 	alunos.id = cursos.id
+		ON 	aluno_curso.id_aluno = cursos.id
 	WHERE
-		alunos.id = '$id'";
+		aluno_curso.id_aluno = '$id'";
 		$sql = $this->db->query($sql);
 		try {
 			if ($sql->rowCount() > 0) {
