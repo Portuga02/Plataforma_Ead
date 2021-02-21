@@ -59,7 +59,7 @@
         </ul>
     </div>
     <div>
-        <h3>Softwares e utilitários </h3>
+        <h3>Softwares e Utilitários </h3>
         <hr />
         <br>
         <ul>
