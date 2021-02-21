@@ -7,7 +7,7 @@ class CursoModels extends model
 
 	public function getCursosDoAluno($id)
 	{
-		$array = array();
+		$array = [];
 
 		$sql = " SELECT 
 		alunos.id,
@@ -21,11 +21,14 @@ class CursoModels extends model
 	WHERE
 		alunos.id = '$id'";
 		$sql = $this->db->query($sql);
+		try {
+			if ($sql->rowCount() > 0) {
+				$array = $sql->fetchAll();
+			}
 
-		if ($sql->rowCount() > 0) {
-			$array = $sql->fetchAll();
+			return $array;
+		} catch (\Throwable $th) {
+			echo "error get de alunos" . $th->getMessage();
 		}
-
-		return $array;
 	}
 }

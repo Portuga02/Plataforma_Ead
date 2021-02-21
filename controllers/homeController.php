@@ -1,7 +1,7 @@
 <?php
 
 /**Controller referente ao uso da home */
-class HomeController extends controller
+class homeController extends controller
 {
 
 	public function __construct()
@@ -17,8 +17,8 @@ class HomeController extends controller
 	public function index()
 	{
 		$dados = array(
-			'info' => array(),
-			'cursos' => array()
+			'info' => [],
+			'cursos' => []
 		);
 		$alunos = new alunosModels();
 		$alunos->setALuno($_SESSION['lgaluno']);

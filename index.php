@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config.php';
+require_once 'config.php';
 
 spl_autoload_register(function ($class) {
 	if (strpos($class, 'Controller') > -1) {
